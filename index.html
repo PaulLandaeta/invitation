@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>Anna's Baby Shower</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script:400,700|Kaushan+Script|Pacifico|Satisfy">
+
+<style>
+h1,h2,h3{font-family: "Dancing Script", cursive; color: black}
+body, html {height: 100%}
+p, a {line-height: 2; font-family: "Satisfy", cursive; color: black}
+.bgimg, .bgimg2 {
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.bgimg {background-image: url("flower-wallpaper.JPG")}
+.bgimg2 {background-image: url("flower-wallpaper2 clear.PNG")}
+</style>
+
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg" id="home">
+  <div class="w3-display-middle w3-text-black w3-center">
+    <h2>You're Invited To</h2>
+    <h1 class="w3-jumbo">Anna's Baby Shower!</h1>
+    <h2><b>08.05.2017</b></h2>
+  </div>
+</header>
+
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">HOME</a>
+    <a href="#shower" style="width:25%" class="w3-bar-item w3-button">SHOWER</a>
+    <a href="#details" style="width:25%" class="w3-bar-item w3-button">DETAILS</a>
+    <a href="#rsvp" style="width:25%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
+  </div>
+</div>
+
+<!-- About / Shower -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="shower">
+  <div class="w3-content">
+    <h1 class="w3-jumbo w3-center w3-text-black"><b>Baby Shower</b></h1>
+    
+      <img class="w3-round-large" src="Baby_Rattle.PNG" style="width:10%;margin:0px 0">
+    <br>
+    <h3 style="text-align: center">Twinkle, twinkle, tiny light<br>
+        Little eyes that shine so bright<br>
+        A precious baby girl from heaven above<br>
+        To fill our hearts with so much love!<br>
+        <br>
+        Please join us for a ladies only baby shower honoring Anna Faizi!</i>
+      </h3>
+    <p class="w3-center"><a href="#details" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+  </div>
+</div>
+
+<!-- Background photo -->
+<div class="w3-display-container bgimg2">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">You Are Invited</h1><br>
+    <h2>Of course..</h2>
+  </div>
+</div>
+
+<!-- Shower information -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center" id="details">
+  <div class="w3-content">
+    <h1 class="w3-jumbo w3-center w3-text-black"><b>The Shower</b></h1>
+    <img class="w3-round-large" src="carriage.PNG" style="width:10%;margin:0px 0">
+    <h3> Hosted by Sultana Altaf.</h3>
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>When</h2>
+        <h3>Saturday August 5th @ 5:00pm</h3>
+      </div>
+      <div class="w3-half">
+        <h2>Where</h2>
+        <h3>808 Via Barquero, San Marcos, CA 92069</h3>        
+      </div>
+      <div>
+        <h2>Registry</h2>
+        <h3>The expecting couple is registered at BabyList.com, please click <a href="https://www.babylist.com/anna-faizi" target="_blank" class="w3-hover-text-green">here</a>.</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-center w3-wide bgimg" id="rsvp">
+  <h1>HOPE YOU CAN MAKE IT!</h1>
+  <img class="w3-round-large" src="pacifiers.PNG" style="width:20%;margin:0px 0">
+  <h3 >Kindly Respond By July 31st 2017</h3>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="margin: 25px; padding:10px 60px">RSVP</button>
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px;">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">CAN YOU COME?</h1>
+      <p>We really hope you can make it.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Full Name(s)" name="name" id="name">
+        <input class="w3-input w3-border" type="text" placeholder="Number Attending" name="attending" id="attending">
+      </form>
+      <p><i>Sincerely, Anna & Ali Faizi</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-pink" id="going">Going</button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-indigo" id="not-going">Can't come</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p style = "color: white">Copyright &copy; <a href="https://github.com/annabfaizi" target="_blank" class="w3-hover-text-green" style = "color: white">Anna B. Faizi</a></p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+<script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="rsvp.js"></script>
+
+
+</body>
+</html>
+
