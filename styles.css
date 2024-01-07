@@ -252,8 +252,8 @@ a {
 }
 
 .heart {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   background-color: #ff3838;
   transform: translate(-50%, -50%) rotate(45deg);
   animation: heartbeat 1.4s linear infinite;
@@ -314,4 +314,23 @@ a {
   border: none;
   cursor: pointer;
   outline: none;
+}
+
+.letter {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.open-text {
+  position: absolute; /* Posiciona absolutamente dentro de .card */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centrado exacto */
+  z-index: 1; /* Asegúrate de que esté por encima de otros elementos dentro de .card */
+  /* Estilos adicionales para tu texto, como color, fuente, etc. */
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
 }
