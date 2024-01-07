@@ -358,9 +358,25 @@ a {
   display: block;
 }
 
-.imagen-circular img {
-  width: 200px; /* o el tamaño que desees */
-  height: 200px; /* debe ser igual al ancho para un círculo perfecto */
+.contenedor-imagenes {
+  position: relative;
+  width: 200px; /* El ancho deseado para tus imágenes */
+  height: 200px; /* El alto deseado para tus imágenes */
+}
+
+.contenedor-imagenes img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s;
   border-radius: 50%; /* esto crea el efecto circular */
-  object-fit: cover; /* mantiene la proporción de la imagen */
+  object-fit: cover;
+}
+
+.contenedor-imagenes img.imagen-activa {
+  opacity: 1;
 }

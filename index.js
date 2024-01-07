@@ -67,3 +67,25 @@ function iniciarContadorRegresivo(fechaObjetivo) {
 const fechaObjetivo = new Date('Jan 13, 2024 15:00:00').getTime();
 iniciarContadorRegresivo(fechaObjetivo);
 
+
+
+function rotarImagenes() {
+    const imagenes = document.querySelectorAll("#rotadorDeImagenes img");
+    let indiceActivo = 0; // Comienza con la primera imagen
+
+    setInterval(() => {
+        // Oculta la imagen actual
+        imagenes[indiceActivo].classList.remove('imagen-activa');
+
+        // Calcula el índice de la próxima imagen
+        indiceActivo = (indiceActivo + 1) % imagenes.length;
+
+        // Muestra la próxima imagen
+        imagenes[indiceActivo].classList.add('imagen-activa');
+    }, 3000); // Cambia la imagen cada 3 segundos (3000 milisegundos)
+}
+
+// Iniciar la rotación de imágenes cuando el DOM esté completamente cargado
+window.addEventListener('DOMContentLoaded', (event) => {
+    rotarImagenes();
+});
