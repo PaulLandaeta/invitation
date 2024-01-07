@@ -89,3 +89,22 @@ function rotarImagenes() {
 window.addEventListener('DOMContentLoaded', (event) => {
     rotarImagenes();
 });
+
+var audio = document.getElementById('audio1');
+
+// Reproduce la música cuando la página está visible.
+function handleVisibilityChange() {
+    if (document.visibilityState === 'visible') {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
+// Evento para manejar el cambio de visibilidad
+document.addEventListener('visibilitychange', handleVisibilityChange, false);
+
+// También puedes detener la música cuando la ventana se cierra o el usuario navega a otra página.
+window.addEventListener('beforeunload', function(event) {
+    audio.pause();
+}); 
