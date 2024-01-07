@@ -1,48 +1,63 @@
 :root {
-    --primary-color: #8E744B;
-    --secondary-color: #fff8f0;
-    --max-widht-container: 700px;
-    --border-color: #dbcebe;
-    --text-color: #1b1b1b;
-    --gradiente-oro: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  --primary-color: #8e744b;
+  --secondary-color: #fff8f0;
+  --max-widht-container: 700px;
+  --border-color: #dbcebe;
+  --text-color: #1b1b1b;
+  --gradiente-oro: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  background-color: #fff8f0;
 }
 
 @font-face {
-    font-family: nova;
-    src: url("./assets/fonts/nova_quinta.otf");
+  font-family: nova;
+  src: url("./assets/fonts/nova_quinta.otf");
 }
 
 @font-face {
-    font-family: times;
-    src: url("./assets/fonts/times.ttf");
+  font-family: times;
+  src: url("./assets/fonts/times.ttf");
 }
 
 @font-face {
-    font-family: jost;
-    src: url("./assets/fonts/jost.ttf");
+  font-family: jost;
+  src: url("./assets/fonts/jost.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: -webkit-fill-available;
-    min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 
 /* layout */
 .container {
-    position: relative;
-    width: 100%;
-    font-size: 1rem;
-    font-family: jost;
-    color: var(--text-color);
-    max-width: var(--max-widht-container); 
-    background-color: var(--secondary-color);
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  font-size: 1rem;
+  font-family: jost;
+  color: var(--text-color);
+  max-width: var(--max-widht-container);
+  background-color: var(--secondary-color);
+  margin: 0 auto;
 }
 
 /* imagenes */
@@ -50,155 +65,178 @@ body {
 .top-image,
 .bottom-image,
 .estrellas {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .top-image,
 .estrellas {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .gatito {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: -webkit-fill-available;
-    width: fill-available;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: -webkit-fill-available;
+  width: fill-available;
 }
 
 .bottom-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* contenido */
 
 .content {
-    animation: slide-in 3s ease-in-out;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  animation: slide-in 3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .separator {
-    width: 100%;
-    height: min(53vw, 350px);
+  width: 100%;
+  height: min(53vw, 350px);
 }
 
 /* textos */
 .baby-shower {
-    font-family: times;
-    color: var(--primary-color);
-    font-size: 1.7rem;
+  font-family: times;
+  color: var(--primary-color);
+  font-size: 1.7rem;
 }
 
 .mensaje-invitacion {
-    padding: 16px 0;
-    width: 70%;
+  padding: 16px 0;
+  width: 70%;
+  padding-top: 50px;
+  position: relative;
 }
 
 .gold-text {
-    background: var(--gradiente-oro);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: var(--gradiente-oro);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .name {
-    font-family: nova;
-    font-size: 4rem;
-    margin: 30px 0;
-    font-weight: 400;
+  font-family: nova;
+  font-size: 4rem;
+  margin: 30px 0;
+  font-weight: 400;
 }
 
 .fecha {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fecha p {
-    width: 100%;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--border-color);
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .fecha p:first-child {
-    border-right: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
 }
 
 a {
-    text-decoration: none;
-    color: var(--text-color);
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 .ubicacion {
-    border-bottom: 2px solid var(--border-color);
-    padding: 16px 0;
-    width: 90%;
+  border-bottom: 2px solid var(--border-color);
+  padding: 16px 0;
+  width: 90%;
 }
 
 .ubicacion p {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .call-to-action {
-    display: block;
-    width: 100%;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 26px;
-    border-radius: 5px;
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 12px 26px;
+  border-radius: 5px;
 }
 
 .regalos {
-    padding-top: 16px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--border-color);
+  padding-top: 16px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .regalos div,
 .regalos a {
-    flex: 1;
-    margin: 0 auto;
+  flex: 1;
+  margin: 0 auto;
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .buttons {
-    margin-top: 30px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  margin-top: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 @keyframes slide-in {
-    0% {
-        /* transform: translateX(-100%); */
-        transform: translateY(-50px);
-        opacity: 0%;
-    }
-    100% {
-        /* transform: translateX(0); */
-        transform: translateY(0);
-        opacity: 100%;
-    }
+  0% {
+    /* transform: translateX(-100%); */
+    transform: translateY(-50px);
+    opacity: 0%;
+  }
+  100% {
+    /* transform: translateX(0); */
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+#slider {
+  position: relative;
+  width: 200px; /* o el ancho que desees */
+  height: 120px; /* o el alto que desees */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
 }
