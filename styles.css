@@ -334,3 +334,26 @@ a {
   font-weight: bold;
   font-size: 15px;
 }
+
+.contador-regresivo {
+  display: flex;
+  justify-content: center;
+  background-color: #eeded0; /* O el color de fondo que prefieras */
+  padding: 20px;
+}
+
+.tiempo {
+  text-align: center;
+  margin: 0 10px;
+  color: #8c746f; /* O el color de texto que prefieras */
+}
+
+.tiempo span {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.tiempo small {
+  display: block;
+}

@@ -34,4 +34,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("heartButton").addEventListener("click", onHeartButtonClick);
 });
 
-window.addEventListener('scroll', audioClick);
+function iniciarContadorRegresivo(fechaObjetivo) {
+    const diasElem = document.getElementById('dias');
+    const horasElem = document.getElementById('horas');
+    const minutosElem = document.getElementById('minutos');
+    const segundosElem = document.getElementById('segundos');
+
+    function actualizarContador() {
+        const ahora = new Date();
+        const diferencia = fechaObjetivo - ahora;
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        diasElem.textContent = dias < 10 ? '0' + dias : dias;
+        horasElem.textContent = horas < 10 ? '0' + horas : horas;
+        minutosElem.textContent = minutos < 10 ? '0' + minutos : minutos;
+        segundosElem.textContent = segundos < 10 ? '0' + segundos : segundos;
+
+        if (diferencia <= 0) {
+            clearInterval(intervalo);
+            // Acciones adicionales cuando el contador llega a cero
+        }
+    }
+
+    const intervalo = setInterval(actualizarContador, 1000);
+}
+
+// Configura la fecha de finalización para el contador regresivo
+const fechaObjetivo = new Date('Jan 13, 2024 15:00:00').getTime();
+iniciarContadorRegresivo(fechaObjetivo);
+
