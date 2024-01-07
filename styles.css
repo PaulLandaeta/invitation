@@ -325,7 +325,7 @@ a {
 
 .open-text {
   position: absolute; /* Posiciona absolutamente dentro de .card */
-  top: 50%; /* Centra verticalmente */
+  top: 52%; /* Centra verticalmente */
   left: 50%; /* Centra horizontalmente */
   transform: translate(-50%, -50%); /* Ajusta el centrado exacto */
   z-index: 1; /* Asegúrate de que esté por encima de otros elementos dentro de .card */

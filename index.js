@@ -24,8 +24,8 @@ function audioClick(id, clip) {
 }
 
 function onHeartButtonClick() {
-    var div = document.getElementById("card2");
-    div.hidden = true;
+    var letter = document.getElementById("letter");
+    letter.remove();
     container.hidden = false;
     audioClick();
 }
