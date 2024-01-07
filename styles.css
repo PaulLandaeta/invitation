@@ -179,7 +179,7 @@ a {
 }
 
 .regalos {
-  padding-top: 16px;
+  padding-top: 10px;
   width: 90%;
   display: flex;
   align-items: center;
@@ -356,4 +356,11 @@ a {
 
 .tiempo small {
   display: block;
+}
+
+.imagen-circular img {
+  width: 200px; /* o el tamaño que desees */
+  height: 200px; /* debe ser igual al ancho para un círculo perfecto */
+  border-radius: 50%; /* esto crea el efecto circular */
+  object-fit: cover; /* mantiene la proporción de la imagen */
 }
